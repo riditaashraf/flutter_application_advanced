@@ -21,10 +21,11 @@ class MyApp extends StatelessWidget {
             body: Column(
               children: [
                 CachedNetworkImage(
-        imageUrl: "http://via.placeholder.com/350x150",
-        placeholder: (context, url) => CircularProgressIndicator(),
-        errorWidget: (context, url, error) => Icon(Icons.error),
-     ),
+                  imageUrl:
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM6ehGfTZH2mZnTQE3N_bNMt1ujMCLqVWf8g&s",
+                  placeholder: (context, url) => CircularProgressIndicator(),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                ),
               ],
             )));
   }

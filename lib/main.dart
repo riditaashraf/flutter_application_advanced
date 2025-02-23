@@ -13,6 +13,42 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
+            drawer: Drawer(
+              child: ListView(
+                children: [
+                  SizedBox(
+                      height: 70,
+                      child: DrawerHeader(
+                          child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(Icons.tiktok),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Icon(Icons.close),
+                          )
+                        ],
+                      ))),
+                  ListTile(
+                    leading: Icon(Icons.home),
+                    title: Text("Home"),
+                    trailing: Text("Trail"),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.home),
+                    title: Text("Home"),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.home),
+                    title: Text("Home"),
+                    onTap: () {},
+                  ),
+                ],
+              ),
+            ),
+            endDrawer: Drawer(),
             appBar: AppBar(
               title: Text("Advanced UI-Lab06"),
               backgroundColor: Colors.blue,

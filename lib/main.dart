@@ -1,5 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
+ 
+ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
+        
             drawer: Drawer(
               child: ListView(
                 children: [
@@ -54,15 +57,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.blue,
               centerTitle: true,
             ),
-            body: Column(
-              children: [
-                CachedNetworkImage(
-                  imageUrl:
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM6ehGfTZH2mZnTQE3N_bNMt1ujMCLqVWf8g&s",
-                  placeholder: (context, url) => CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
-                ),
-              ],
-            )));
+            body: appBody()),
+            ))));
   }
 }
